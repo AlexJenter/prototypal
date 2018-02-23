@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import List from '../components/List'
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +32,7 @@ class IndexPage extends React.Component {
         >
         </textarea>
         <button onClick={this.handleSend}>send</button>
+      <List />
       </div>
     )
   }
