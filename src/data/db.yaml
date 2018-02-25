@@ -1,1 +1,3 @@
-root: helloo
+pages:
+  - text: we are items
+  - text: change the next one!

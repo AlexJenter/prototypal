@@ -4,16 +4,16 @@ import Helmet from 'react-helmet'
 
 import Item from '../Item'
 
-export default class extends React.Component {
+class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      pages: this.props.pages
     }
   }
 
   handleAddClick = event => {
-   this.setState({ items: [...this.state.items, {text: "item"}]})
+   this.setState({ pages: [...this.state.pages, {text: "try to change me"}]})
   }
 
   render() {
@@ -22,7 +22,7 @@ export default class extends React.Component {
         <ul>
           <li>hello i am an item</li>
           <li>i too am an item</li>
-          {this.state.items.map((x, i) => <Item key={i} {...x}/>)}
+          {this.state.pages.map((x, i) => <Item key={i} {...x}/>)}
         </ul>
         <button onClick={this.handleAddClick}>add item</button>
       </div>
@@ -30,4 +30,4 @@ export default class extends React.Component {
   }
 }
 
-
+export default List

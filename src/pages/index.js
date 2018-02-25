@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
+import data from '../data/db.yaml'
 import List from '../components/List'
 
 class IndexPage extends React.Component {
@@ -10,29 +10,27 @@ class IndexPage extends React.Component {
       text: ""
     }
   }
+
+  componentWillMount() {
+    this.setState({ data })
+  }
+
   handleChange = event => {
     this.setState({ text: event.target.value })
   }
+
   handleSend = event => {
-    let data = { root: this.state.text };
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:4040/save", true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify(data));
+    xhr.send(JSON.stringify(this.state.data));
   }
+
   render() {
     return (
       <div>
-        <textarea
-          onChange={this.handleChange}
-          value={this.state.text}
-          name="test"
-          cols="30"
-          rows="10"
-        >
-        </textarea>
         <button onClick={this.handleSend}>send</button>
-      <List />
+        <List {...data}/>
       </div>
     )
   }
