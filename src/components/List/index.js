@@ -8,12 +8,13 @@ class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pages: this.props.pages
+      items: this.props.items
     }
   }
 
-  handleAddClick = event => {
-   this.setState({ pages: [...this.state.pages, {text: "try to change me"}]})
+  handleSend = event => {
+    this.setState({ items: [...this.state.items, {text: "try to change me"}]})
+    this.props.callBack(this.state);
   }
 
   render() {
@@ -21,10 +22,9 @@ class List extends React.Component {
       <div>
         <ul>
           <li>hello i am an item</li>
-          <li>i too am an item</li>
-          {this.state.pages.map((x, i) => <Item key={i} {...x}/>)}
+          {this.state.items.map((x, i) => <Item key={i} {...x}/>)}
         </ul>
-        <button onClick={this.handleAddClick}>add item</button>
+        <button onClick={this.handleSend}>add item</button>
       </div>
     )
   }

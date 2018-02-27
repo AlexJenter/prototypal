@@ -1,3 +1,2 @@
-pages:
-  - text: we are items
-  - text: change the next one!
+- text: home page
+- text: about

@@ -1,29 +1,25 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 
 class Item extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: this.props.text
+      text: this.props.text,
     }
   }
 
   handleChange = event => {
+    const { id } = this.props
+    const { value } = event.target
     this.setState({
-      text: event.target.value,
-    })
+      text: value
+    }, this.props.action({ id, value }))
   }
 
   render() {
     return (
       <li>
-        <input
-          type="text"
-          onChange={this.handleChange}
-          value={this.state.text}
-        />
+        <input type="text" value={this.state.text} onChange={this.handleChange}/>
       </li>
     )
   }
