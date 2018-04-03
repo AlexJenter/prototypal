@@ -31,9 +31,12 @@ class IndexPage extends React.Component {
   render() {
     return (
       <div>
-        {this.state.items.map((x, i) => {
-          return <Item key={i} id={i} {...x} action={this.handleItemChange} />
-        })}
+        <ul>
+          {this.state.items.map((x, i) => {
+            return <Item key={i} id={i} {...x} action={this.handleItemChange} />
+          })}
+        </ul>
+        <button onClick={this.handleAdd}>add</button>
         <button onClick={this.handleSend}>send</button>
       </div>
     )

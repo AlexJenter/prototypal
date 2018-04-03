@@ -1,0 +1,37 @@
+%-font--body {
+  font-family: sans;
+  font-size: 20px;
+}
+
+ul {
+  @extend %-font--body;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+li {
+  @extend %-font--body;
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid coral;
+}
+
+span {
+  @extend %-font--body;
+  flex: 1 1 auto;
+}
+
+input {
+  @extend %-font--body;
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+button {
+  border: none;
+  background-color: coral;
+  width: 200px;
+}
