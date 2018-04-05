@@ -1,2 +1,27 @@
-- text: home boy
-- text: about not
+loading: false
+pages:
+  home:
+    title: Home Boy
+    image:
+      src: /static/0100_pwaaqfoMibI.jpeg
+      alt: rieds
+    text: >
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+  about:
+    title: About things
+    image:
+      src: /static/0198_FC9mIjVT-Yw.jpeg
+      alt: room
+    text: >
+      Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum.
+      
+  contact:
+    title: Contact
+    image:
+      src: /static/0406_SmhN4FejPFs.jpeg
+      alt: water
+    text: >
+      Donec id elit non mi porta gravida at eget metus.
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.
+      Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.

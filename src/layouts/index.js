@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 import Header from '../components/Header'
 import List from '../components/List'
+import data from "../data/db.yaml";
+
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
